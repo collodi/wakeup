@@ -19,7 +19,11 @@ def main():
 	description = today['weather'][0]['description']
 	clouds = today['clouds']
 
-	script = f"Today's high is {max_temp} degrees and low is {min_temp} degrees. The weather is {description} with a {pop} percent chance of rain. There is about {clouds} percent of cloud coverage. The sunset is at {sunset}. Enjoy your day!"
+	person = os.environ.get('WAKEUP_PERSON')
+	if person is None:
+		person = ''
+
+	script = f"Good morning, {person}! Today's high is {max_temp} and low is {min_temp} degrees. The weather is {description} with a {pop} percent chance of rain. There is about {clouds} percent of cloud coverage. The sunset is at {sunset}. Enjoy your day!"
 
 	print(today)
 	print(script)
