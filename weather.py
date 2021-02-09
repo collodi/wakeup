@@ -36,6 +36,7 @@ def speak(script):
 	voice.save('/tmp/forecast.wav')
 
 	player = vlc.MediaPlayer('/tmp/forecast.wav')
+	player.audio_set_volume(100)
 	player.play()
 	wait_for_player(player)
 

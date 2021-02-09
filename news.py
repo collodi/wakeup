@@ -41,6 +41,7 @@ def main():
 			continue
 
 		player = vlc.MediaPlayer(audio)
+		player.audio_set_volume(100)
 		player.play()
 
 		wait_for_player(player)
