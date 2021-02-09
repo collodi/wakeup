@@ -6,9 +6,9 @@ def main():
 	player = vlc.MediaPlayer(url)
 	player.play()
 
-	for i in range(50):
-		player.audio_set_volume(i * 2)
-		time.sleep(6)
+	for i in range(70):
+		player.audio_set_volume(30 + i)
+		time.sleep(3)
 
 	player.audio_set_volume(100)
 	time.sleep(60)
