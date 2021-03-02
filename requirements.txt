@@ -3,3 +3,4 @@ youtube_dl
 pafy
 gtts
 requests
+python-kasa
