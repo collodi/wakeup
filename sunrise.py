@@ -12,7 +12,7 @@ async def main():
 	await d.set_brightness(0)
 	await d.update()
 
-	await d.set_dimmer_transition(100, 5 * 60 * 1000)
+	await d.set_dimmer_transition(100, 10 * 60 * 1000)
 	await d.update()
 
 if __name__ == '__main__':
