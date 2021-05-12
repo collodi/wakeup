@@ -3,17 +3,16 @@ import pafy
 import time
 
 def main():
-	url = 'https://www.youtube.com/watch?v=5yx6BWlEVcY&t=0s'
+	url = 'https://www.youtube.com/watch?v=5qap5aO4i9A'
 	video = pafy.new(url)
 	player = vlc.MediaPlayer(video.getbest().url, ':no-video')
 	player.play()
 
-	for i in range(100):
+	for i in range(93):
 		player.audio_set_volume(i)
-		time.sleep(2.4)
+		time.sleep(2.7)
 
-	player.audio_set_volume(100)
-	time.sleep(60)
+	time.sleep(60 * 3)
 
 if __name__ == '__main__':
 	main()
